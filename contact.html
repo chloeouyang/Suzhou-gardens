@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="shortcut icon" href="images/icon.png" />
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: green;
+      }
+
+      li {
+        float: left;
+        font-size: large;
+      }
+
+      li a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 20px 22px;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        background-color: white;
+        color: green;
+      }
+
+      body {
+        background-color: rgb(240, 243, 204);
+      }
+
+      form {
+        background-color: rgb(240, 243, 204);
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      fieldset {
+        border: 1px solid green;
+        margin: 30px;
+      }
+
+      div {
+        margin: 10px;
+      }
+
+      legend {
+        font-weight: bold;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menubar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="zhuozheng.html">Zhuozheng</a></li>
+        <li><a href="liu.html">Liu</a></li>
+        <li><a href="shizi.html">Shizi</a></li>
+        <li><a href="wangshi.html">Wangshi</a></li>
+        <li><a href="yi.html">Yi</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+      </ul>
+    </div>
+
+    <form action="" method="post">
+      <fieldset class="information">
+        <legend>Your information:</legend>
+        <div>
+          <label for="name">Name:</label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Enter your name here"
+          />
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Enter your email here"
+          />
+        </div>
+      </fieldset>
+
+      <fieldset class="review">
+        <legend>Your Review:</legend>
+        <div>
+          <label for="garden"> Which garden did you go? </label>
+          <select name="garden" id="garden">
+            <option value="zhuozheng">Zhuozheng</option>
+            <option value="liu">Liu</option>
+            <option value="shizi">Shizi</option>
+            <option value="wangshi">Wangshi</option>
+            <option value="yi">Yi</option>
+          </select>
+        </div>
+        <div>
+          What do you think of this garden?
+          <br />
+          <label>
+            <input type="radio" name="rate" value="bad" />
+            Bad
+          </label>
+          <label>
+            <input type="radio" name="rate" value="ordinary" />
+            Ordinary
+          </label>
+          <label>
+            <input type="radio" name="rate" value="good" />
+            Good
+          </label>
+          <label>
+            <input type="radio" name="rate" value="awesome" />
+            awesome
+          </label>
+        </div>
+        <div>
+          <label for="comment"> Comments: </label>
+          <br />
+          <textarea name="comment" id="comment" cols="50" rows="5"></textarea>
+        </div>
+
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+      </fieldset>
+    </form>
+  </body>
+</html>
