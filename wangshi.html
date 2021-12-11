@@ -88,13 +88,13 @@
           />
         </td>
         <td>
-          <h2>
-            Wangshi Garden
-            <br />
+          <h2 id="name">
+            Wangshi Garden </h2>
+            <h2>
             /Master of Nets Garden
           </h2>
           <hr />
-          <p class="intro">
+          <p class="intro" id="intro">
             Opening hour: 7:30AM-5:30PM(4/21-10/20); 7:30AM-5PM(10.21-4.20)
             <br />
             <br />
@@ -138,5 +138,26 @@
         </td>
       </tr>
     </table>
+    <script>
+      function chinese(){
+        document.getElementById("name").innerHTML="网师园";
+      }
+      document.getElementById("name").onmouseover=chinese;
+      
+      function english(){
+        document.getElementById("name").innerHTML="Wangshi Garden";
+      }
+      document.getElementById("name").onmouseout=english;
+      
+      function highlight(){
+        document.getElementById("intro").style.color="green";
+      }
+      document.getElementById("intro").onmouseover=highlight;
+ 
+      function original(){
+        document.getElementById("intro").style.color="rgb(160, 159, 159)";
+      }
+      document.getElementById("intro").onmouseout=original;
+    </script>
   </body>
 </html>

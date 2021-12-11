@@ -83,13 +83,13 @@
           <img src="images/liu.jpg" alt="liu" title="liu" width="400" />
         </td>
         <td>
-          <h2>
-            Liu Garden
-            <br />
+          <h2 id="name">
+            Liu Garden</h2>
+            <h2>
             /The Lingering Garden
           </h2>
           <hr />
-          <p class="intro">
+          <p class="intro" id="intro">
             Opening hour: 7:30AM-5:30PM(3/1-11/15); 7:30AM-5PM(11.16-2.29)
             <br />
             <br />
@@ -132,5 +132,26 @@
         </td>
       </tr>
     </table>
+    <script>
+      function chinese(){
+        document.getElementById("name").innerHTML="留园";
+      }
+      document.getElementById("name").onmouseover=chinese;
+      
+      function english(){
+        document.getElementById("name").innerHTML="Liu Garden";
+      }
+      document.getElementById("name").onmouseout=english;
+      
+      function highlight(){
+        document.getElementById("intro").style.color="green";
+      }
+      document.getElementById("intro").onmouseover=highlight;
+ 
+      function original(){
+        document.getElementById("intro").style.color="rgb(160, 159, 159)";
+      }
+      document.getElementById("intro").onmouseout=original;
+    </script>
   </body>
 </html>

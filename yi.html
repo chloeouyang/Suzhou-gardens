@@ -83,13 +83,13 @@
           <img src="images/yi.jpg" alt="yi" title="yi" width="400" />
         </td>
         <td>
-          <h2>
-            Yi Garden
-            <br />
+          <h2 id="name">
+            Yi Garden</h2>
+            <h2>
             /The Garden if Cultivation
           </h2>
           <hr />
-          <p class="intro">
+          <p class="intro" id="intro">
             Opening hour: 7:30AM-4:30PM(10/15-3/31); 7:30AM-5PM(4.1-10.14)
             <br />
             <br />
@@ -125,5 +125,26 @@
         </td>
       </tr>
     </table>
+    <script>
+      function chinese(){
+        document.getElementById("name").innerHTML="艺圃";
+      }
+      document.getElementById("name").onmouseover=chinese;
+      
+      function english(){
+        document.getElementById("name").innerHTML="Yi Garden";
+      }
+      document.getElementById("name").onmouseout=english;
+      
+      function highlight(){
+        document.getElementById("intro").style.color="green";
+      }
+      document.getElementById("intro").onmouseover=highlight;
+ 
+      function original(){
+        document.getElementById("intro").style.color="rgb(160, 159, 159)";
+      }
+      document.getElementById("intro").onmouseout=original;
+    </script>
   </body>
 </html>

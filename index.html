@@ -27,54 +27,7 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="images/icon.png" />
-    <style>
-      body {
-        background-color: rgb(240, 243, 204);
-      }
-      table {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 10px;
-      }
-      td {
-        padding: 1px;
-        vertical-align: top;
-      }
-
-      th {
-        color: green;
-        font-size: xx-large;
-        text-align: left;
-        padding-bottom: 3%;
-        padding-top: 5%;
-      }
-
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: green;
-      }
-
-      li {
-        float: left;
-        font-size: large;
-      }
-
-      li a {
-        display: inline-block;
-        color: white;
-        text-align: center;
-        padding: 20px 22px;
-        text-decoration: none;
-      }
-
-      li a:hover {
-        background-color: white;
-        color: green;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="menubar">
@@ -89,7 +42,7 @@
         <li><a href="sitemap.html">Sitemap</a></li>
       </ul>
     </div>
-
+  
     <table>
       <tr>
         <th colspan="3">Cultural Heritage——Classical Gardens of Suzhou</th>
@@ -98,19 +51,21 @@
         <td rowspan="2" class="picture">
           <a href="zhuozheng.html"
             ><img
+              id="zhuozheng"
               src="images/zhuozheng.jpg"
               alt="zhuozheng"
-              title="Click me!"
+              title="Zhuozheng Garden 拙政园"
               width="250"
-              height="470"
+              height="480"
           /></a>
         </td>
         <td class="picture">
           <a href="liu.html"
             ><img
+              id="liu"
               src="images/liu.jpg"
               alt="liu"
-              title="Click me!"
+              title="Liu Garden 留园"
               width="300"
               height="230"
           /></a>
@@ -118,9 +73,10 @@
         <td class="picture">
           <a href="shizi.html"
             ><img
+              id="shizi"
               src="images/shizi.jpg"
               alt="shizi"
-              title="Click me!"
+              title="Shizi Garden 狮子林"
               width="300"
               height="230"
           /></a>
@@ -130,9 +86,10 @@
         <td class="picture">
           <a href="wangshi.html"
             ><img
+              id="wangshi"
               src="images/wangshi.jpg"
               alt="wangshi"
-              title="Click me!"
+              title="Wangshi Garden 网师园"
               width="300"
               height="230"
           /></a>
@@ -140,14 +97,99 @@
         <td class="picture">
           <a href="yi.html"
             ><img
+              id="yi"
               src="images/yi.jpg"
               alt="yi"
-              title="Click me!"
+              title="Yi Garden 艺圃"
               width="300"
               height="230"
           /></a>
         </td>
       </tr>
     </table>
+    <div id="move">
+      <h2 id="welcome">Welcome to Suzhou!</h2>
+    </div>
+    <script>
+      const welcome = document.getElementById("welcome");
+      let p = 5;
+      function move() {
+        welcome.style.left = p + "px";
+        if (p > document.getElementById("move").clientWidth - 250) {
+          p = 5;
+        } else {
+          p = p + 5;
+        }
+        setTimeout(move, 40);
+      }
+      document.querySelector("body").onload = move;
+
+      function border1(){
+        let garden = document.getElementById("zhuozheng");
+        garden.style.borderColor="yellow";
+        garden.src = "images/huanxiu.jpg";
+      }
+      function border2(){
+        let garden = document.getElementById("zhuozheng");
+        garden.style.borderColor="rgb(240, 243, 204)";
+        garden.src = "images/zhuozheng.jpg";
+      }
+      document.getElementById("zhuozheng").onmouseover=border1;
+      document.getElementById("zhuozheng").onmouseout=border2;
+
+      function border3(){
+        let garden = document.getElementById("liu");
+        garden.style.borderColor="yellow";
+        garden.src = "images/ou.jpg";
+      }
+      function border4(){
+        let garden = document.getElementById("liu");
+        garden.style.borderColor="rgb(240, 243, 204)";
+        garden.src = "images/liu.jpg";
+      }
+      document.getElementById("liu").onmouseover=border3;
+      document.getElementById("liu").onmouseout=border4;
+
+      
+      function border5(){
+        let garden = document.getElementById("shizi");
+        garden.style.borderColor="yellow";
+        garden.src = "images/tuisi.jpg";
+      }
+      function border6(){
+        let garden = document.getElementById("shizi");
+        garden.style.borderColor="rgb(240, 243, 204)";
+        garden.src = "images/shizi.jpg";
+      }
+      document.getElementById("shizi").onmouseover=border5;
+      document.getElementById("shizi").onmouseout=border6;
+
+      function border7(){
+        let garden = document.getElementById("wangshi");
+        garden.style.borderColor="yellow";
+        garden.src = "images/1.jpg";
+      }
+      function border8(){
+        let garden = document.getElementById("wangshi");
+        garden.style.borderColor="rgb(240, 243, 204)";
+        garden.src = "images/wangshi.jpg";
+      }
+      document.getElementById("wangshi").onmouseover=border7;
+      document.getElementById("wangshi").onmouseout=border8;
+      
+      function border9(){
+        let garden = document.getElementById("yi");
+        garden.style.borderColor="yellow";
+        garden.src = "images/2.jpg";
+      }
+      function border10(){
+        let garden = document.getElementById("yi");
+        garden.style.borderColor="rgb(240, 243, 204)";
+        garden.src = "images/yi.jpg";
+      }
+      document.getElementById("yi").onmouseover=border9;
+      document.getElementById("yi").onmouseout=border10;
+      
+    </script>
   </body>
 </html>

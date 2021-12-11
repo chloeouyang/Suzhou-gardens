@@ -7,6 +7,9 @@
     <title>Zhuozheng Garden</title>
     <link rel="shortcut icon" href="images/icon.png" />
     <style>
+      img{
+        border: 5px solid rgb(240, 243, 204);
+      }
       body {
         background-color: rgb(240, 243, 204);
       }
@@ -81,6 +84,7 @@
       <tr>
         <td class="picture">
           <img
+            id="zhuozheng"
             src="images/zhuozheng1.jpg"
             alt="zhuozheng1"
             title="zhuozheng1"
@@ -88,13 +92,13 @@
           />
         </td>
         <td>
+          <h2 id="name">
+            Zhuozheng Garden</h2>
           <h2>
-            Zhuozheng Garden
-            <br />
             /The Humble Administrator's Garden
           </h2>
           <hr />
-          <p class="intro">
+          <p class="intro" id="intro">
             Opening hour: 7:30AM-5:30PM(3/1-11/15); 7:30AM-5PM(11.16-2.29)
             <br />
             <br />
@@ -133,5 +137,26 @@
         </td>
       </tr>
     </table>
+   <script>
+     function chinese(){
+       document.getElementById("name").innerHTML="拙政园";
+     }
+     document.getElementById("name").onmouseover=chinese;
+     
+     function english(){
+       document.getElementById("name").innerHTML="Zhuozheng Garden";
+     }
+     document.getElementById("name").onmouseout=english;
+     
+     function highlight(){
+       document.getElementById("intro").style.color="green";
+     }
+     document.getElementById("intro").onmouseover=highlight;
+
+     function original(){
+       document.getElementById("intro").style.color="rgb(160, 159, 159)";
+     }
+     document.getElementById("intro").onmouseout=original;
+   </script>
   </body>
 </html>

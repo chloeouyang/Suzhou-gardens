@@ -83,13 +83,13 @@
           <img src="images/shizi.jpg" alt="shizi" title="shizi" width="400" />
         </td>
         <td>
-          <h2>
-            Shizi Garden
-            <br />
+          <h2 id="name">
+            Shizi Garden</h2>
+            <h2>
             /The Lion Forest Garden
           </h2>
           <hr />
-          <p class="intro">
+          <p class="intro" id="intro">
             Opening hour: 7:30AM-5:30PM(3/1-10/15); 7:30AM-5PM(10.16-2.29)
             <br />
             <br />
@@ -130,5 +130,26 @@
         </td>
       </tr>
     </table>
+    <script>
+      function chinese(){
+        document.getElementById("name").innerHTML="狮子林";
+      }
+      document.getElementById("name").onmouseover=chinese;
+      
+      function english(){
+        document.getElementById("name").innerHTML="Shizi Garden";
+      }
+      document.getElementById("name").onmouseout=english;
+      
+      function highlight(){
+        document.getElementById("intro").style.color="green";
+      }
+      document.getElementById("intro").onmouseover=highlight;
+ 
+      function original(){
+        document.getElementById("intro").style.color="rgb(160, 159, 159)";
+      }
+      document.getElementById("intro").onmouseout=original;
+    </script>
   </body>
 </html>
